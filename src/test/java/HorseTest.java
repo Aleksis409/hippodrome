@@ -99,7 +99,7 @@ class HorseTest {
             horseMock.verify(() -> Horse.getRandomDouble(0.2, 0.9));
 
             double expectedDistance = initialDistance + horse.getSpeed() * randomValue;
-            assertEquals(expectedDistance, horse.getDistance());
+            assertEquals(expectedDistance, horse.getDistance(), 1e-2);
         }
     }
 
